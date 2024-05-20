@@ -1,5 +1,25 @@
-body {
+@import 'primeflex/primeflex.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     font-family: "Scada", sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(1, 1, 5, 1) 0%, rgba(9, 9, 121, 1) 71%, rgba(51, 50, 193, 1) 100%);
+    overflow: hidden;
+}
+
+app-root {
+    display: flex;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 h1,

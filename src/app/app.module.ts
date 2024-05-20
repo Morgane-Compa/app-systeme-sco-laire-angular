@@ -13,6 +13,8 @@ import { PostComponentComponent } from './components/post-component/post-compone
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
 import { ProfileCardComponentComponent } from './components/profile-card-component/profile-card-component.component';
+import { LeftBackgroundComponentComponent } from './components/left-background-component/left-background-component.component';
+import { RightBackgroundComponentComponent } from './components/right-background-component/right-background-component.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProfileCardComponentComponent } from './components/profile-card-compone
     PostComponentComponent,
     HeaderComponentComponent,
     ActionButtonComponent,
-    ProfileCardComponentComponent
+    ProfileCardComponentComponent,
+    LeftBackgroundComponentComponent,
+    RightBackgroundComponentComponent
   ],
   imports: [
     BrowserModule,
