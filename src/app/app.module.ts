@@ -15,6 +15,11 @@ import { ActionButtonComponent } from './components/action-button/action-button.
 import { ProfileCardComponentComponent } from './components/profile-card-component/profile-card-component.component';
 import { LeftBackgroundComponentComponent } from './components/left-background-component/left-background-component.component';
 import { RightBackgroundComponentComponent } from './components/right-background-component/right-background-component.component';
+import { ConfidentialPoliticComponent } from './pages/confidential-politic/confidential-politic.component';
+import { CookiesPoliticComponent } from './pages/cookies-politic/cookies-politic.component';
+import { UseConditionsComponent } from './pages/use-conditions/use-conditions.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { UnsubscribeConditionsComponent } from './pages/unsubscribe-conditions/unsubscribe-conditions.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { RightBackgroundComponentComponent } from './components/right-background
     ProfileCardComponentComponent,
     LeftBackgroundComponentComponent,
     RightBackgroundComponentComponent
+    ConfidentialPoliticComponent,
+    CookiesPoliticComponent,
+    UseConditionsComponent,
+    ContactComponent,
+    UnsubscribeConditionsComponent
   ],
   imports: [
     BrowserModule,
