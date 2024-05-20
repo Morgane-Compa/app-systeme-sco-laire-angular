@@ -13,6 +13,8 @@ import { PostComponentComponent } from './components/post-component/post-compone
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
 import { ProfileCardComponentComponent } from './components/profile-card-component/profile-card-component.component';
+import { LeftBackgroundComponentComponent } from './components/left-background-component/left-background-component.component';
+import { RightBackgroundComponentComponent } from './components/right-background-component/right-background-component.component';
 import { ConfidentialPoliticComponent } from './pages/confidential-politic/confidential-politic.component';
 import { CookiesPoliticComponent } from './pages/cookies-politic/cookies-politic.component';
 import { UseConditionsComponent } from './pages/use-conditions/use-conditions.component';
@@ -32,6 +34,8 @@ import { UnsubscribeConditionsComponent } from './pages/unsubscribe-conditions/u
     HeaderComponentComponent,
     ActionButtonComponent,
     ProfileCardComponentComponent,
+    LeftBackgroundComponentComponent,
+    RightBackgroundComponentComponent
     ConfidentialPoliticComponent,
     CookiesPoliticComponent,
     UseConditionsComponent,
