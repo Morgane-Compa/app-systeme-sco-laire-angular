@@ -15,6 +15,14 @@ import { ActionButtonComponent } from './components/action-button/action-button.
 import { ProfileCardComponentComponent } from './components/profile-card-component/profile-card-component.component';
 import { LeftBackgroundComponentComponent } from './components/left-background-component/left-background-component.component';
 import { RightBackgroundComponentComponent } from './components/right-background-component/right-background-component.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ServiceTermsComponent } from './pages/service-terms/service-terms.component';
+import { CookiePolicyComponent } from './pages/cookie-policy/cookie-policy.component';
+import { UnsubscriptionConditionsComponent } from './pages/unsubscription-conditions/unsubscription-conditions.component';
+import { CopyrightsPolicyComponent } from './pages/copyrights-policy/copyrights-policy.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { LegalPagesComponent } from './pages/legal-pages/legal-pages.component';
+import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,15 @@ import { RightBackgroundComponentComponent } from './components/right-background
     ActionButtonComponent,
     ProfileCardComponentComponent,
     LeftBackgroundComponentComponent,
-    RightBackgroundComponentComponent
+    RightBackgroundComponentComponent,
+    PrivacyPolicyComponent,
+    ServiceTermsComponent,
+    CookiePolicyComponent,
+    UnsubscriptionConditionsComponent,
+    CopyrightsPolicyComponent,
+    ContactComponent,
+    LegalPagesComponent,
+    PhotoGalerieComponent
   ],
   imports: [
     BrowserModule,

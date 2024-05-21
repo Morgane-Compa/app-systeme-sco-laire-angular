@@ -1,1 +1,24 @@
-<p>header-component works!</p>
+<header class="desktop-header flex justify-content-between align-items-start">
+
+    <div class="profile-nav flex">
+        <h2 title="voir mon profil" routerLink="profile/:id">Bonjour</h2>
+        <img class="phone-deconection" title="Déconection" src="assets\icons\disconect.png" alt="Déconection">
+    </div>
+    
+
+    <nav class="flex align-items-center justify-content-around">
+        <img routerLink="" title="Fil d'actualité" class="desktop-nav-icons mt-2" src="assets\icons\newspaper.png" alt="Fil d'actualité">
+        <p class="phone-nav" routerLink="" title="Fil d'actualité">news</p>
+
+        <img routerLink="" title="Chat privé" class="desktop-nav-icons mt-2" src="assets\icons\chat.png" alt="Chat privé">
+        <p class="phone-nav" routerLink="" title="Fil d'actualité">Messages Privés</p>
+
+        <img routerLink="galerie" title="Galerie photo" class="desktop-nav-icons mt-2" src="assets\icons\galerie-icon.png" alt="Galerie photo">
+        <p class="phone-nav" routerLink="galerie" title="Galerie photo" >Photos</p>
+
+        <img routerLink="legal-pages" title="Contact et légalité" class="info mt-1" src="assets\icons\informations.png" alt="Contact et légalité">
+
+        <img class="desktop-nav-icons" title="Déconection" src="assets\icons\disconect.png" alt="Déconection">
+    </nav>
+    
+</header>
