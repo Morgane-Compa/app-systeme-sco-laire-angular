@@ -1,10 +1,11 @@
 .desktop-header {
-    width: 100%;
+    width: 64%;
     height: 75px;
     margin: auto;
     color: white;
     background: linear-gradient(90deg, rgba(177,0,135,1) 0%, rgba(122,47,245,1) 100%);
     border-radius: 0 0 50% 50%;
+    position: fixed;
 }
 
 .phone-deconection {
@@ -41,8 +42,9 @@ img:hover {
     padding: 5px;
 }
 
-@media (max-width: 650px){
+@media (max-width: 850px){
     header {
+        width: 100% !important;
         height: 100px !important;
         flex-direction: column;
         border-radius: 0 !important;

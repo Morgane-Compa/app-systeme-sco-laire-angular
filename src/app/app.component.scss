@@ -1,3 +1,7 @@
+.page-container {
+    margin-top: 100px;
+}
+
 .container {
     flex: 1;
 }
@@ -562,7 +566,6 @@
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
 
-
 @keyframes animStar {
     from {
         transform: translateY(0px);
@@ -573,7 +576,7 @@
 }
 
 // Background responsive
-@media (max-width: 650px){
+@media (max-width: 850px){
     .bg-elements {
         display: none;
     }

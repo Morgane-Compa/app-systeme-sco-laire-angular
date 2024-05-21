@@ -7,15 +7,17 @@
 html, body {
     font-family: "Scada", sans-serif;
     height: 100vh;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     background: linear-gradient(90deg, rgba(1, 1, 5, 1) 0%, rgba(9, 9, 121, 1) 71%, rgba(51, 50, 193, 1) 100%);
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 app-root {
     display: flex;
     height: 100vh;
+    max-height: 100vh;
 }
 
 main {
