@@ -1,1 +1,21 @@
-<p>feed-page works!</p>
+<button (click)="loadNews()">Recharger les news</button>
+
+<div>
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!errorMessage && filteredNewsListBySchool.length === 0" class="no-news">
+    No news available.
+  </div>
+
+  <div *ngIf="filteredNewsListBySchool.length > 0">
+    <ul>
+      <li *ngFor="let news of filteredNewsListBySchool">
+        <h3>{{ news.news_text }}</h3>
+        <button (click)="deleteNews(news.id)">Delete</button>
+        <button (click)="updateNews(news)">Update</button>
+      </li>
+    </ul>
+  </div>
+</div>

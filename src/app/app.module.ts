@@ -23,6 +23,7 @@ import { CopyrightsPolicyComponent } from './pages/copyrights-policy/copyrights-
 import { ContactComponent } from './pages/contact/contact.component';
 import { LegalPagesComponent } from './pages/legal-pages/legal-pages.component';
 import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,11 +47,12 @@ import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.compo
     CopyrightsPolicyComponent,
     ContactComponent,
     LegalPagesComponent,
-    PhotoGalerieComponent
+    PhotoGalerieComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
