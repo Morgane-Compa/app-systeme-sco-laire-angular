@@ -11,11 +11,22 @@ import { ServiceTermsComponent } from './pages/service-terms/service-terms.compo
 import { UnsubscriptionConditionsComponent } from './pages/unsubscription-conditions/unsubscription-conditions.component';
 import { LegalPagesComponent } from './pages/legal-pages/legal-pages.component';
 import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path:"",
+    path: "login",
+    component: LoginPageComponent
+  },
+  {
+    path: "register",
+    component: RegisterPageComponent
+  },
+  {
+    path: "news-feed",
     component: FeedPageComponent
   },
   {
