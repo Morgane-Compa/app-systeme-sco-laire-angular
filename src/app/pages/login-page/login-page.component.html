@@ -1,1 +1,17 @@
-<p>login-page works!</p>
+<div class="containerForm">
+    <h2>Connexion</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div>
+            <label for="mail">email :</label>
+            <input type="text" id="mail" formControlName="mail">
+        </div>
+
+        <div>
+            <label for="password">mot de passe : </label>
+            <input type="text" id="password" formControlName="password">
+        </div>
+
+        <button type="submit">valider</button>
+
+    </form>
+</div>
