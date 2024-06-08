@@ -23,7 +23,7 @@ import { CopyrightsPolicyComponent } from './pages/copyrights-policy/copyrights-
 import { ContactComponent } from './pages/contact/contact.component';
 import { LegalPagesComponent } from './pages/legal-pages/legal-pages.component';
 import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaderResponse, HttpHeaders } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
