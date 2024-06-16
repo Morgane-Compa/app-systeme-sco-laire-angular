@@ -12,9 +12,15 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  private getHttpHeader(): HttpHeaders {
+    return new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+  }
+  
   register(user: User): Observable<any> {
-    return this.http.post(`${USER_URL}/register`, user);
-  };
+    return this.http.post(`${USER_URL}/signup`, user, { headers: this.getHttpHeader() });
+  }
 
   login(user: User): Observable<any> {
     const headers = { 'Content-Type': 'application/json' };
