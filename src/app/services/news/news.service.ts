@@ -12,7 +12,6 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   getNews(): Observable<News[]> {
-    console.log("getNews")
     return this.http.get<{data:News[]}>(NEWS_URL).pipe(map(response => response.data));
   };
 

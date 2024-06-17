@@ -44,7 +44,7 @@ export class RegisterPageComponent {
       formData.user_image_id = 1;
       
       this.userService.register(formData).subscribe(response => {
-        console.log('Registration successful', response);
+        console.log('Registration successful', response.message);
         this.router.navigate(['/login']);
       }, error => {
         console.error('Registration failed', error);

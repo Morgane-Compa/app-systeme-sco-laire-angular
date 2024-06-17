@@ -14,7 +14,6 @@ export class FeedPageComponent {
   filteredNewsListByclassroom: News[] = [];
   errorMessage: string | null = null;
   schoolId: number = 1;
-  classroomId: number = 1;
 
   constructor(private newsService: NewsService) {}
 
@@ -44,22 +43,6 @@ export class FeedPageComponent {
       error: (err) => {
         this.errorMessage = 'An error occurred while deleting the news';
         console.error('Error deleting news:', err);
-      }
-    });
-  }
-
-  updateNews(updatedNews: News): void {
-    this.newsService.updateNews(updatedNews).subscribe({
-      next: (news) => {
-        const index = this.newsList.findIndex(newsItem => newsItem.id === news.id);
-        if (index !== -1) {
-          this.newsList[index] = news;
-          this.filteredNewsListBySchool = this.newsList.filter(newsItem => newsItem.school_id === this.schoolId);
-        }
-      },
-      error: (err) => {
-        this.errorMessage = 'An error occurred while updating the news';
-        console.error('Error updating news:', err);
       }
     });
   }

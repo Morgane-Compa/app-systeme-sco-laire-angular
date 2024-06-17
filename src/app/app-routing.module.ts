@@ -30,7 +30,7 @@ const routes: Routes = [
     component: FeedPageComponent
   },
   {
-    path: "profile/:id",
+    path: "profile",
     component: ProfilePageComponent
   },
   {
