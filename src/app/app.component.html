@@ -5,10 +5,9 @@
 </section>
 <app-left-background-component class="bg-elements z-1"></app-left-background-component>
 <section class="container z-1">
-    <app-header-component></app-header-component>
+    <app-header-component *ngIf="showHeader"></app-header-component>
     <div class="page-container">
         <router-outlet></router-outlet>
     </div>
-    
 </section>
 <app-right-background-component class="bg-elements z-1"></app-right-background-component>
