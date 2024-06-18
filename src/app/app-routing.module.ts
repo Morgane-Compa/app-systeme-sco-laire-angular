@@ -8,11 +8,11 @@ import { CookiePolicyComponent } from './pages/legal/cookie-policy/cookie-policy
 import { CopyrightsPolicyComponent } from './pages/legal/copyrights-policy/copyrights-policy.component';
 import { PrivacyPolicyComponent } from './pages/legal/privacy-policy/privacy-policy.component';
 import { ServiceTermsComponent } from './pages/legal/service-terms/service-terms.component';
-import { UnsubscriptionConditionsComponent } from './pages/legal/unsubscription-conditions/unsubscription-conditions.component';
 import { LegalPagesComponent } from './pages/legal/legal-pages/legal-pages.component';
 import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { UnsubscriptionConditionsComponent } from './pages/legal/unsubscription-conditions/unsubscription-conditions.component';
 
 
 const routes: Routes = [
@@ -30,7 +30,7 @@ const routes: Routes = [
     component: FeedPageComponent
   },
   {
-    path: "profile/:id",
+    path: "profile",
     component: ProfilePageComponent
   },
   {

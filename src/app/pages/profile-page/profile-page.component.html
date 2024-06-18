@@ -1,1 +1,51 @@
-<p>profile-page works!</p>
+<!-- Profile info -->
+<div class="flex justify-content-end m-3 gap-1 underline text-white cursor-pointer font-bold">
+  <p>Modifier mon profil</p>
+  <img class="modifyIcon" src="assets\icons\modify-icon.png" alt="">
+</div>
+
+<div *ngIf="user" class="profileContainer flex justify-content-between gap-3">
+
+  <div class="userName flex flex-column justify-content-between align-items-center">
+    <img class="profileImg" src="assets\images\avatar\earth.png" alt="">
+    <div class="flex flex-column align-items-center">
+      <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+      <p>{{ user.user_role ? 'Professeur' : 'Parent' }}</p>
+    </div>
+  </div>
+
+  <div class="complemetaryInfo flex flex-column justify-content-between gap-3">
+    <div *ngIf="school" class="school">
+      <h3>Etablissement : </h3>
+      <p>{{ school.school_name }}</p>
+      <p><span class="underline font-bold">Rue</span> : {{school.street_number}} {{school.street_name}}</p>
+      <p><span class="underline font-bold">Ville</span> : {{school.town_name}} {{school.postal_code}}</p>
+    </div>
+
+    <div class="classroom">
+      <h3>Classe :</h3>
+      <p>Cette section est en crours de création</p>
+    </div>
+
+    <div class="contact">
+      <h3>Contact :</h3>
+      <p><span class="underline font-bold">Numéro de téléphone</span> : {{ user.phone_number}}</p>
+      <p><span class="underline font-bold">Adresse mail</span> : {{ user.mail}}</p>
+    </div>
+
+  </div>
+</div>
+<!-- legal pages -->
+<p routerLink="/privacy-policy" class="legalPageButton cursor-pointer">Politique de confidentialité</p>
+<p routerLink="/service-terms" class="legalPageButton cursor-pointer">Conditions d'utilisation</p>
+<p routerLink="/cookie-policy" class="legalPageButton cursor-pointer">Politique relative aux cookies</p>
+<p routerLink="/copyrights-policy" class="legalPageButton cursor-pointer">Droits d'auteur et propriété intellectuelle</p>
+<p routerLink="/privacy-policy" class="legalPageButton cursor-pointer">Clause de non-responsabilité</p>
+<p routerLink="/unsubscribe" class="legalPageButton cursor-pointer">Conditions de désinscription</p>
+<p routerLink="/contact" class="legalPageButton cursor-pointer">Nous contacter</p>
+
+<!-- Unsubscribe -->
+<div class="flex justify-content-between text-white cursor-pointer underline">
+  <p (click)="logout()">Me déconnecter</p>
+  <p (click)="DeleteAcount()">Me désinscrire</p>
+</div>

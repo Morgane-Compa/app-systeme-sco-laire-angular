@@ -14,7 +14,6 @@
       <li *ngFor="let news of filteredNewsListBySchool">
         <h3>{{ news.news_text }}</h3>
         <button (click)="deleteNews(news.id)">Delete</button>
-        <button (click)="updateNews(news)">Update</button>
       </li>
     </ul>
   </div>

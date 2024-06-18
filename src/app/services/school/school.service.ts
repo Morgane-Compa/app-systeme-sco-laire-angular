@@ -14,4 +14,8 @@ export class SchoolService {
   getAllSchools(): Observable<School[]> {
     return this.http.get<{data:School[]}>(SCHOOL_URL).pipe(map(response => response.data));
   }
+
+  getSchoolById(id: number): Observable<School> {
+    return this.http.get<{data:School}>(`${SCHOOL_URL}/${id}`).pipe(map(response => response.data));
+  }
 }
