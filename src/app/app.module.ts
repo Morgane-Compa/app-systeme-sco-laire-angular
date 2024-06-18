@@ -26,6 +26,7 @@ import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.compo
 import { HttpClientModule, HttpHeaderResponse, HttpHeaders } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { PrivateChatComponent } from './pages/private-chat/private-chat.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     LegalPagesComponent,
     PhotoGalerieComponent,
     RegisterPageComponent,
+    PrivateChatComponent,
 
   ],
   imports: [

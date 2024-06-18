@@ -13,6 +13,7 @@ import { PhotoGalerieComponent } from './pages/photo-galerie/photo-galerie.compo
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UnsubscriptionConditionsComponent } from './pages/legal/unsubscription-conditions/unsubscription-conditions.component';
+import { PrivateChatComponent } from './pages/private-chat/private-chat.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: "profile",
     component: ProfilePageComponent
+  },
+  {
+    path: "private-chat",
+    component: PrivateChatComponent
   },
   {
     path: "galerie",
