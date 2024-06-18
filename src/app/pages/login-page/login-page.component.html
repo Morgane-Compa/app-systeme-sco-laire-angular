@@ -1,18 +1,20 @@
-<div class="containerForm">
-    <h2>Connexion</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-        <div>
-            <label for="mail">email :</label>
-            <input type="text" id="mail" formControlName="mail">
-        </div>
+    <div class="containerForm flex flex-column align-items-center">
+        <h2 class="mt-5">Connexion</h2>
 
-        <div>
-            <label for="password">mot de passe : </label>
-            <input type="text" id="password" formControlName="password">
-        </div>
+        <form [formGroup]="loginForm" class="flex flex-column align-items-center" (ngSubmit)="login()">
 
-        <button type="submit">valider</button>
-
-    </form>
-</div>
-<a routerLink="/register">Créer un compte</a>
+            <div class="auth-input flex flex-column mt-5">
+                <label for="mail">email :</label>
+                <input type="text" id="mail" formControlName="mail">
+            </div>
+    
+            <div class="auth-input flex flex-column mt-5">
+                <label for="password">mot de passe : </label>
+                <input type="text" id="password" formControlName="password">
+            </div>
+    
+            <button type="submit" class="global-button">valider</button>
+    
+        </form>
+        <a routerLink="/register">Créer un compte</a>
+    </div>
