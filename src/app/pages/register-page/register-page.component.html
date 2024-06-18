@@ -1,48 +1,47 @@
-<div class="containerForm">
-    <h2>Créer un compte</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="register()">
-      <div>
-        <label for="firstname">Prénom :</label>
-        <input type="text" id="firstname" formControlName="firstname">
-      </div>
-  
-      <div>
-        <label for="lastname">Nom :</label>
-        <input type="text" id="lastname" formControlName="lastname">
-      </div>
-  
-      <div>
-        <label for="mail">Email :</label>
-        <input type="email" id="mail" formControlName="mail">
-      </div>
-  
-      <div>
-        <label for="phone_number">Numéro de téléphone :</label>
-        <input type="text" id="phone_number" formControlName="phone_number">
-      </div>
-  
-      <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" formControlName="password">
-      </div>
-  
-      <div>
-        <label for="school_id">École :</label>
-        <select id="school_id" formControlName="school_id">
-          <option *ngFor="let school of schools" [value]="school.id">{{ school.school_name }}</option>
-        </select>
-      </div>
-  
-      <div>
-        <label for="user_role">Rôle :</label>
-        <select id="user_role" formControlName="user_role">
-          <option [value]="true">Admin</option>
-          <option [value]="false">Utilisateur</option>
-        </select>
-      </div>
-  
-      <button type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
-    </form>
-  </div>
+<div class="containerForm flex flex-column align-items-center">
+  <h2 class="mt-5">Créer un compte</h2>
+  <form [formGroup]="registerForm" class="flex flex-column align-items-center" (ngSubmit)="register()">
+    <div class="auth-input flex flex-column mt-5">
+      <label for="firstname">Prénom :</label>
+      <input type="text" id="firstname" formControlName="firstname" class="input-and-value">
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="lastname">Nom :</label>
+      <input type="text" id="lastname" formControlName="lastname" class="input-and-value">
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="mail">Email :</label>
+      <input type="email" id="mail" formControlName="mail" class="input-and-value">
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="phone_number">Numéro de téléphone :</label>
+      <input type="text" id="phone_number" formControlName="phone_number" class="input-and-value">
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" formControlName="password" class="input-and-value">
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="school_id">École :</label>
+      <select id="school_id" formControlName="school_id" class="input-and-value">
+        <option *ngFor="let school of schools" [value]="school.id">{{ school.school_name }}</option>
+      </select>
+    </div>
+
+    <div class="auth-input flex flex-column mt-5">
+      <label for="user_role">Rôle :</label>
+      <select id="user_role" formControlName="user_role" class="input-and-value">
+        <option [value]="true">Professeur</option>
+        <option [value]="false">Parent</option>
+      </select>
+    </div>
+
+    <button type="submit" class="global-button" [disabled]="registerForm.invalid">S'inscrire</button>
+  </form>
   <a routerLink="/login">J'ai déjà un compte</a>
-  
+</div>

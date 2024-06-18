@@ -1,5 +1,5 @@
 .containerForm {
-    margin-top: 200px !important;
+    margin-top: 130px !important;
     margin: auto;
     color: white;
     background: linear-gradient(90deg, rgba(51, 50, 192, 1) 0%, rgba(2, 2, 8, 1) 100%);
@@ -20,6 +20,9 @@ input {
     height: 50px;
     border-radius: 10px;
     border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 label {
