@@ -26,7 +26,6 @@ export class UserService {
   }
 
   login(user: User): Observable<any> {
-    console.log(this.http.post(`${USER_URL}/login`, user, { headers: this.getHttpHeader() }))
     return this.http.post(`${USER_URL}/login`, user, { headers: this.getHttpHeader() });
   }
 
@@ -78,5 +77,9 @@ export class UserService {
     localStorage.removeItem('token');
     localStorage.removeItem('refreshToken');
     localStorage.removeItem('userId');
+  }
+
+  deleteUserById(id: number): Observable<any> {
+    return this.http.delete<any>(`${USER_URL}/${id}`);
   }
 }
