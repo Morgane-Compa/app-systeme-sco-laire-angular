@@ -54,17 +54,17 @@ export class ProfilePageComponent {
     );
   }
 
-  loadClassroom(classroomId: number): void {
-    this.classroomService.getSchoolById(classroomId).subscribe(
-      (data) => {
-        this.classroom = data;
-        console.log(this.classroom)
-      },
-      (error) => {
-        console.error('Error fetching school data', error);
-      }
-    );
-  }
+  // loadClassroom(classroomId: number): void {
+  //   this.classroomService.getSchoolById(classroomId).subscribe(
+  //     (data) => {
+  //       this.classroom = data;
+  //       console.log(this.classroom)
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching school data', error);
+  //     }
+  //   );
+  // }
 
   logout(): void {
     this.userService.logout();
