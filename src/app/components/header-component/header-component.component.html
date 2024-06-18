@@ -1,7 +1,7 @@
 <header class="desktop-header flex justify-content-between align-items-start">
 
-    <div *ngIf="user" class="profile-nav flex">
-        <h2 title="voir mon profil" routerLink="profile">Bonjour {{ user.firstname }}</h2>
+    <div  class="profile-nav flex">
+        <h2 title="voir mon profil" routerLink="profile">Bonjour <span *ngIf="user">{{ user.firstname }}</span></h2>
         <img (click)="logout()" class="phone-deconection" title="Déconection" src="assets\icons\disconect.png"
             alt="Déconection">
     </div>
