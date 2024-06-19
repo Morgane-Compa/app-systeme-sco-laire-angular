@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginResponse } from 'src/app/models/authRegisterResponse';
 import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginPageComponent {
 
   login() {
     if (this.loginForm.valid) {
-      this.userService.login(this.loginForm.value).subscribe(response => {
+      this.userService.login(this.loginForm.value).subscribe((response: LoginResponse) => {
         const { accessToken, refreshToken } = response.token;
         
         if (accessToken && refreshToken) {

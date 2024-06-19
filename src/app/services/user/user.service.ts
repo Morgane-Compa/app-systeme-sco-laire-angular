@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { USER_URL } from 'src/app/shared/urls';
 import { User } from 'src/app/models/user';
 import { jwtDecode } from "jwt-decode";
-import { RegisterResponse } from 'src/app/models/authRegisterResponse';
+import { LoginResponse, RegisterResponse } from 'src/app/models/authRegisterResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +25,8 @@ export class UserService {
     return this.http.post<RegisterResponse>(`${USER_URL}/signup`, user);
   }
 
-  login(user: User): Observable<any> {
-    return this.http.post(`${USER_URL}/login`, user, { headers: this.getHttpHeader() });
+  login(user: User): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${USER_URL}/login`, user, { headers: this.getHttpHeader() });
   }
 
   getUserById(id: number): Observable<any> {
@@ -36,7 +36,7 @@ export class UserService {
   refreshToken(): Observable<any> {
     const refreshToken = localStorage.getItem('refreshToken');
     if (!refreshToken) {
-      console.log("no token")
+      console.log("no token");
     }
     return this.http.post(`${USER_URL}/token`, { token: refreshToken });
   }
