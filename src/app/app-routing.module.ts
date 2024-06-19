@@ -14,6 +14,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UnsubscriptionConditionsComponent } from './pages/legal/unsubscription-conditions/unsubscription-conditions.component';
 import { PrivateChatComponent } from './pages/private-chat/private-chat.component';
+import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
 
 
 const routes: Routes = [
@@ -69,6 +70,10 @@ const routes: Routes = [
   {
     path: "unsubscribe",
     component: UnsubscriptionConditionsComponent
+  },
+  {
+    path: "who-we-are",
+    component: WhoWeAreComponent
   },
   {
     path:"not-found",
