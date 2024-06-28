@@ -41,6 +41,7 @@ export class RegisterPageComponent {
   register() {
     if (this.registerForm.valid) {
       const formData = this.registerForm.value;
+      formData.user_role = formData.user_role === 'true';
       formData.user_image_id = 1;
       
       this.userService.register(formData).subscribe(response => {
