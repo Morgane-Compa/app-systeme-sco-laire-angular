@@ -50,6 +50,17 @@ h2, h3 {
     }
 
     .userName img {
-        width: 70%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .complemetaryInfo ,.school, .classroom, .contact {
+        border-radius: 0;
+    }
+
+    .legalPageButton {
+        width: 90%;
     }
 }

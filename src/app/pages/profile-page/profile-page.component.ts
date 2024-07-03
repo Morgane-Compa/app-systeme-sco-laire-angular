@@ -15,12 +15,16 @@ import { UserService } from 'src/app/services/user/user.service';
 export class ProfilePageComponent {
   user?: User;
   userId: number | null = null;
-  school? : School;
-  classroom? : Classroom;
+  school?: School;
+  classroom?: Classroom;
 
   constructor(private userService: UserService, private schoolService: SchoolService, private classroomService: ClassroomService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getInfoProfile();
+  }
+
+  getInfoProfile() {
     const storedUserId = localStorage.getItem('userId');
 
     if (storedUserId) {
@@ -72,12 +76,12 @@ export class ProfilePageComponent {
   }
 
   DeleteAcount() {
-    if(this.userId) {
+    if (this.userId) {
       this.userService.deleteUserById(this.userId).subscribe(
         () => {
           console.log('User deleted successfully');
-          this.userService.logout(); 
-          this.router.navigate(['/register']); 
+          this.userService.logout();
+          this.router.navigate(['/register']);
         },
         (error) => {
           console.error('Error deleting user', error);

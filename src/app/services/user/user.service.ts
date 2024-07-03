@@ -29,8 +29,8 @@ export class UserService {
     return this.http.post<LoginResponse>(`${USER_URL}/login`, user, { headers: this.getHttpHeader() });
   }
 
-  getUserById(id: number): Observable<any> {
-    return this.http.get<any>(`${USER_URL}/${id}`);
+  getUserById(id: number): Observable<{ data: User }> {
+    return this.http.get<{ data: User }>(`${USER_URL}/${id}`);
   }
 
   refreshToken(): Observable<any> {
