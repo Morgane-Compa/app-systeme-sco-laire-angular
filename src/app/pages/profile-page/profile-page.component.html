@@ -7,11 +7,11 @@
 <div *ngIf="user" class="profileContainer flex justify-content-between gap-3">
 
   <div class="userName flex flex-column justify-content-between align-items-center">
-    <img class="profileImg" src="assets\images\avatar\earth.png" alt="">
-    <div class="flex flex-column align-items-center">
+    <div class="flex flex-column align-items-center mt-3">
       <h2>{{ user.firstname }} {{ user.lastname }}</h2>
       <p>{{ user.user_role ? 'Professeur' : 'Parent' }}</p>
     </div>
+    <img class="profileImg" src="assets\images\avatar\earth.png" alt="">
   </div>
 
   <div class="complemetaryInfo flex flex-column justify-content-between gap-3">

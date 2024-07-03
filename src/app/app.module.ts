@@ -27,6 +27,7 @@ import { HttpClientModule, HttpHeaderResponse, HttpHeaders } from '@angular/comm
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { PrivateChatComponent } from './pages/private-chat/private-chat.component';
+import { OrderByDatePipe } from './pipes/order-by-date.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PrivateChatComponent } from './pages/private-chat/private-chat.componen
     PhotoGalerieComponent,
     RegisterPageComponent,
     PrivateChatComponent,
+    OrderByDatePipe,
 
   ],
   imports: [

@@ -1,20 +1,42 @@
-<button (click)="loadNews()">Recharger les news</button>
+<button class="global-button p-2" (click)="loadNews()">Recharger les news</button>
 
-<div>
-  <div *ngIf="errorMessage" class="error">
-    {{ errorMessage }}
+<section class="flex flex-column align-items-center">
+  <div>
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="!errorMessage && filteredNewsListBySchool.length === 0" class="no-news">
+      No news available.
+    </div>
+
+    <div *ngIf="filteredNewsListBySchool.length > 0">
+      <ul class="flex flex-column align-items-center gap-3">
+
+        <li class="flex flex-column p-3" 
+          *ngFor="let news of filteredNewsListBySchool | orderByDate:'created_at'"
+          >
+          <div class="flex justify-content-between mb-3">
+            <h2>{{ userNames.get(news.user_id)}}</h2>
+            
+            <button
+              *ngIf="user?.user_role === true && news.user_id === user?.id"
+              class="delete-button flex justify-content-center align-items-center" 
+              (click)="deleteNews(news.id)"
+              >
+              <img class="delete-button-icon" src="assets\icons\close-black.png" alt="">
+            </button>
+            
+          </div>
+          <p class="date mb-2">Le {{ news.created_at | date:'dd/MM/yyyy à HH:mm' }}</p>
+          <p>{{ news.news_text }}</p>
+        </li>
+
+      </ul>
+    </div>
   </div>
 
-  <div *ngIf="!errorMessage && filteredNewsListBySchool.length === 0" class="no-news">
-    No news available.
-  </div>
-
-  <div *ngIf="filteredNewsListBySchool.length > 0">
-    <ul>
-      <li *ngFor="let news of filteredNewsListBySchool">
-        <h3>{{ news.news_text }}</h3>
-        <button (click)="deleteNews(news.id)">Delete</button>
-      </li>
-    </ul>
-  </div>
-</div>
+  <button *ngIf="user?.user_role === true" class="add-button fixed" title="Ajouter une news">
+    <img src="assets\icons\add-icon-pink.png" alt="ajouter une news">
+  </button>
+</section>
