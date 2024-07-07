@@ -19,7 +19,7 @@
 
             <div class="flex">
               <button *ngIf="user?.user_role === true && news.user_id === user?.id"
-                class="modify-button flex justify-content-center align-items-center" (click)="deleteNews(news.id)">
+                class="modify-button flex justify-content-center align-items-center" (click)="editNews(news)">
                 <img class="modify-button-icon" src="assets\icons\modify-icon.png" alt="">
               </button>
 
@@ -43,5 +43,10 @@
   </button>
 </section>
 
-<app-adding-modal-component *ngIf="showModal" (closeModal)="showModal = false" (newsCreated)="onNewsCreated($event)">
+<app-adding-modal-component
+  *ngIf="showModal"
+  [news]="newsToEdit"
+  (closeModal)="showModal = false"
+  (newsCreated)="onNewsCreated($event)"
+  (newsUpdated)="onNewsCreated($event)">
 </app-adding-modal-component>

@@ -11,13 +11,14 @@ import { UserService } from 'src/app/services/user/user.service';
   styleUrls: ['./adding-modal-component.component.scss']
 })
 export class AddingModalComponentComponent {
-
   user?: User;
   userId: number | null = null;
   school_id?: number | null = null;
 
+  @Input() news?: News;
   @Output() closeModal = new EventEmitter<void>();
   @Output() newsCreated = new EventEmitter<News>();
+  @Output() newsUpdated = new EventEmitter<News>();
   newsForm: FormGroup;
 
   constructor(
@@ -33,6 +34,9 @@ export class AddingModalComponentComponent {
 
   ngOnInit(): void {
     this.getInfoProfile();
+    if (this.news) {
+      this.populateForm(this.news);
+    }
   }
 
   close() {
@@ -72,17 +76,35 @@ export class AddingModalComponentComponent {
         updated_at: new Date()
       };
 
-      this.newsService.createNews(newNews).subscribe(
-        (news: News) => {
-          this.newsCreated.emit(news);
-          this.close();
-        },
-        (error) => {
-          console.error('Error creating news', error);
-        }
-      );
-    } else {
-      console.error('Form is invalid or user data is incomplete');
+      if (this.news) {
+        newNews.id = this.news.id;
+        this.newsService.updateNews(newNews).subscribe(
+          (updatedNews: News) => {
+            this.newsUpdated.emit(updatedNews);
+            this.close();
+          },
+          (error) => {
+            console.error('Error updating news', error);
+          }
+        );
+      } else {
+        this.newsService.createNews(newNews).subscribe(
+          (news: News) => {
+            this.newsCreated.emit(news);
+            this.close();
+          },
+          (error) => {
+            console.error('Error creating news', error);
+          }
+        );
+      }
     }
+  }
+
+  populateForm(news: News) {
+    this.newsForm.patchValue({
+      news_text: news.news_text,
+      image: news.image
+    });
   }
 }
