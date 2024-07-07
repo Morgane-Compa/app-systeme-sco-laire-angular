@@ -5,22 +5,45 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 2;
   }
   
   .modal-content {
     position: fixed;
+    width: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
-    z-index: 1000;
+    z-index: 3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
-  button {
-    margin-top: 20px;
-  }
-  
+
+  .close-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px 15px 10px 15px;
+    border-radius: 50%;
+
+    .close-button-icon {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.close-button:hover {
+    background-color: #F7D1F6;
+}
+
+#news_text {
+  min-height: 230px;
+}
+
+.global-button {
+  margin: 20px 0;
+  padding: 10px 0;
+  flex: 1;
+}

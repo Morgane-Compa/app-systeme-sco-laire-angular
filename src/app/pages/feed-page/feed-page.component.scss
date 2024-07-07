@@ -18,6 +18,27 @@ h2 {
     color: #B10087;
 }
 
+.modify-button {
+    background-color: white;
+    width: 40px !important;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50px;
+    margin-left: 10px;
+
+    .modify-button-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .modify-button-icon:hover {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 .delete-button {
     background-color: white;
     width: 24px !important;
