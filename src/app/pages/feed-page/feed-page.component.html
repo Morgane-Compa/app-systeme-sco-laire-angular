@@ -36,7 +36,9 @@
     </div>
   </div>
 
-  <button *ngIf="user?.user_role === true" class="add-button fixed" title="Ajouter une news">
-    <img src="assets\icons\add-icon-pink.png" alt="ajouter une news">
+  <button *ngIf="user?.user_role === true" class="add-button fixed" title="Ajouter une news" (click)="showModal = true">
+    <img src="assets\icons\plus-double-pink.png" alt="ajouter une news">
   </button>
 </section>
+
+<app-adding-modal-component *ngIf="showModal" (closeModal)="showModal = false" (newsCreated)="onNewsCreated($event)"></app-adding-modal-component>
