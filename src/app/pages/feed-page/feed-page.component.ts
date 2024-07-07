@@ -20,6 +20,7 @@ export class FeedPageComponent {
   schoolId?: number;
   userNames: Map<number, string> = new Map();
   showModal = false;
+  newsToEdit?: News;
 
   constructor(private userService: UserService, private newsService: NewsService) {}
 
@@ -39,7 +40,6 @@ export class FeedPageComponent {
           this.user = data.data;
           if (this.user && this.user.school_id) {
             this.schoolId = this.user.school_id;
-            console.log(this.schoolId);
             this.loadNews();
           }
         },
@@ -77,7 +77,6 @@ export class FeedPageComponent {
       this.userService.getUserById(userId).subscribe(
         (data) => {
           this.userNames.set(userId, data.data.firstname + " "+ data.data.lastname);
-          console.log(this.userNames)
         },
         (error) => {
           console.error('Error fetching user data', error);
@@ -103,6 +102,11 @@ export class FeedPageComponent {
     this.newsList.unshift(news);
     this.filteredNewsListBySchool = this.newsList.filter(newsItem => newsItem.school_id === this.schoolId);
     this.loadNews();
+  }
+
+  editNews(news: News) {
+    this.newsToEdit = news;
+    this.showModal = true;
   }
 }
 

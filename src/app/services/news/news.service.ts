@@ -26,7 +26,6 @@ export class NewsService {
 
   updateNews(news: News): Observable<News> {
     const url = `${NEWS_URL}/${news.id}`;
-    return this.http.put<News>(url, news);
+    return this.http.patch<News>(url, news);
   };
-
 }
