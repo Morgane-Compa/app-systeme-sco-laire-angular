@@ -15,7 +15,7 @@ export class NewsService {
     return this.http.get<{data:News[]}>(NEWS_URL).pipe(map(response => response.data));
   };
 
-  addNews(news: News): Observable<News> {
+  createNews(news: News): Observable<News> {
     return this.http.post<News>(NEWS_URL, news);
   };
 

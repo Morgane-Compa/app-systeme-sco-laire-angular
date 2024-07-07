@@ -19,6 +19,7 @@ export class FeedPageComponent {
   errorMessage: string | null = null;
   schoolId?: number;
   userNames: Map<number, string> = new Map();
+  showModal = false;
 
   constructor(private userService: UserService, private newsService: NewsService) {}
 
@@ -39,7 +40,6 @@ export class FeedPageComponent {
           if (this.user && this.user.school_id) {
             this.schoolId = this.user.school_id;
             console.log(this.schoolId);
-            // Charger les news après avoir obtenu le schoolId
             this.loadNews();
           }
         },
@@ -97,6 +97,12 @@ export class FeedPageComponent {
         console.error('Error deleting news:', err);
       }
     });
+  }
+  
+  onNewsCreated(news: News) {
+    this.newsList.unshift(news);
+    this.filteredNewsListBySchool = this.newsList.filter(newsItem => newsItem.school_id === this.schoolId);
+    this.loadNews();
   }
 }
 
