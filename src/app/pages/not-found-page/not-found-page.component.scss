@@ -1,0 +1,55 @@
+p {
+    color: white;
+}
+
+.font-size {
+    font-size: 20vw;
+    font-weight: bolder;
+}
+
+.not-found-img {
+    width: 30vw;
+    height: 30vw;
+}
+
+.global-button {
+    width: 50%;
+    height: 50px;
+}
+
+.comic-text {
+    font-size: 2vw !important;
+}
+
+@media (max-width: 1160px) {
+    section {
+        margin-top: 200px;
+    }
+
+    .font-size {
+        font-size: 30vw;
+    }
+
+    .comic-text {
+        font-size: 4vw !important;
+    }
+}
+
+@media (max-width: 570px) {
+    section {
+        margin-top: 300px;
+    }
+
+    .font-size {
+        font-size: 40vw;
+    }
+
+    .comic-text {
+        font-size: 5vw !important;
+    }
+
+    .global-button {
+        width: 70%;
+        height: 45px;
+    }
+}
